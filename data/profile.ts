@@ -81,10 +81,10 @@ export const profile: Profile = {
       image: "https://i.postimg.cc/6pcJXQR4/victoryhub.png?w=800",
     },
     {
-      name: "LanuchSaas",
+      name: "LaunchSaaS",
       description:
         "Production-ready SaaS starter makes you ship fast. Features marketing pages, authentication, billing, blog, docs, user dashboard and admin dashboard.",
-      url: "https://lanuchsaas.org",
+      url: "https://launchsaas.org",
       role: "Creator & Maintainer",
       status: "active",
       start: "2025-10",
