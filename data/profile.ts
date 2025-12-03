@@ -17,7 +17,7 @@ export const profile: Profile = {
   contact: [
     {
       network: "Email",
-      username: "victorylaunch@gmail.com",
+      username: "victorylaunches@gmail.com",
       type: "primary",
     },
     {
