@@ -69,6 +69,18 @@ export const profile: Profile = {
 
   projects: [
     {
+      name: "LaunchSaaS",
+      description:
+        "Production-ready SaaS starter makes you ship fast. Features marketing pages, authentication, billing, blog, docs, user dashboard and admin dashboard.",
+      url: "https://launchsaas.org",
+      role: "Creator & Maintainer",
+      status: "active",
+      start: "2025-10",
+      end: null,
+      tech: ["NextJs", "Stripe", "Drizzle", "Fumadocs", "Better Auth"],
+      image: "https://i.postimg.cc/6qxDCp0M/launchsaas.png?w=800",
+    },
+    {
       name: "VictoryHub",
       description:
         "All-in-one powerful utilities website for developers, designers, and professionals. Features blog, multi-language support, dark mode, SEO optimized.",
@@ -81,18 +93,32 @@ export const profile: Profile = {
       image: "https://i.postimg.cc/6pcJXQR4/victoryhub.png?w=800",
     },
     {
-      name: "LaunchSaaS",
+      name: "Victory's Blog",
       description:
-        "Production-ready SaaS starter makes you ship fast. Features marketing pages, authentication, billing, blog, docs, user dashboard and admin dashboard.",
-      url: "https://launchsaas.org",
+        "Personal tech blog sharing insights on web development, programming languages, and software architecture. Built with Next.js and MDX for rich content.",
+      url: "https://blog.victoryhub.cc",
       role: "Creator & Maintainer",
       status: "active",
-      start: "2025-10",
+      start: "2016-06",
       end: null,
-      tech: ["NextJs", "Stripe", "Drizzle", "Fumadocs", "Better Auth"],
-      image: "https://i.postimg.cc/6qxDCp0M/launchsaas.png?w=800",
+      tech: ["NextJs", "MDX", "TailwindCSS", "GitHub Pages"],
+      image: "/blog.png",
+    },
+    {
+      name: "OpenSource Profile Template",
+      description:
+        "A modern, customizable developer profile template built with Next.js and Tailwind CSS. Showcases projects, skills, and experience in a clean layout.",
+      url: "https://github.com/victorymakes/profile",
+      role: "Creator & Maintainer",
+      status: "active",
+      start: "2025-11",
+      end: null,
+      tech: ["NextJs", "TypeScript", "TailwindCSS"],
+      image: "/profile.png",
     },
   ],
+
+  // uncomment the following sections to show work experience, education, and publications
 
   // work: [
   //   {
