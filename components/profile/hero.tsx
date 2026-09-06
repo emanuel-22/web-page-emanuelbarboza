@@ -28,10 +28,36 @@ export function Hero({ name, headline }: HeroProps) {
       <div className="relative z-10 mx-auto w-full max-w-5xl px-4 sm:px-6">
         <div className="mx-auto max-w-3xl space-y-6 text-center">
           <h1
-            className="animate-fade-in-up text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl"
+            className="animate-fade-in-up relative text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl"
             style={{ animationDelay: "0ms" }}
           >
-            {name}
+            <span className="relative inline-block">
+              <span aria-hidden="true">{name}</span>
+              <span className="sr-only">{name}</span>
+              <span
+                aria-hidden="true"
+                className="absolute inset-y-0 right-0 bg-background"
+                style={{
+                  animationName: "typewriter-loop-width",
+                  animationDuration: "5s",
+                  animationDelay: "400ms",
+                  animationTimingFunction: `steps(${Math.max(name.length, 1)}, end)`,
+                  animationIterationCount: "infinite",
+                }}
+              >
+                <span
+                  aria-hidden="true"
+                  className="animate-blink-caret absolute top-1/2 left-0 h-[0.8em] w-0.75 -translate-y-1/2 bg-foreground"
+                />
+              </span>
+            </span>
+
+            <span
+              aria-hidden="true"
+              className="absolute -right-3 -top-5 hidden -rotate-12 rounded-2xl border border-border bg-card px-2.5 py-1.5 text-2xl shadow-lg sm:flex sm:items-center sm:justify-center"
+            >
+              💻
+            </span>
           </h1>
 
           {headline && (

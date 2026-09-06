@@ -150,3 +150,40 @@
 .animate-fade-in-up {
   animation: fade-in-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
+
+/*
+ * A right-anchored cover that shrinks away to "type" (uncovers left to
+ * right) then grows back to "erase" (covers right to left, like a
+ * backspace), pausing at both ends, looping forever. Animating `width`
+ * (rather than a transform) means a caret pinned to the cover's own left
+ * edge — its containing block — visibly rides along the boundary between
+ * typed and untyped text in both directions.
+ */
+@keyframes typewriter-loop-width {
+  0%,
+  8% {
+    width: 100%;
+  }
+  38%,
+  62% {
+    width: 0%;
+  }
+  92%,
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink-caret {
+  animation: blink-caret 1s step-end infinite;
+}

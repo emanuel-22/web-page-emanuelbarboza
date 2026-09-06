@@ -1,8 +1,16 @@
 import { z } from "zod";
 
+const skillCategorySchema = z.enum([
+  "language",
+  "framework",
+  "database",
+  "tool",
+]);
+
 const textIconSchema = z.object({
   text: z.string(),
   icon: z.string().optional(),
+  category: skillCategorySchema.optional(),
 });
 
 const socialSchema = z.object({
@@ -33,6 +41,10 @@ const serviceSchema = z.object({
   description: z.string().optional(),
   // Lucide icon name, e.g. "Code2".
   icon: z.string().optional(),
+  // Bullet points shown on the dedicated /services detail page.
+  details: z.array(z.string()).optional(),
+  // App-relative path (e.g. "/services/example.jpg") shown on the /services detail page.
+  image: z.string().optional(),
 });
 
 const educationSchema = z.object({
@@ -76,6 +88,26 @@ const communitySchema = z.object({
   url: z.url().optional(),
 });
 
+export const certificationCategorySchema = z.enum([
+  "agile-management",
+  "software-development",
+  "ai-data",
+  "leadership",
+]);
+
+const certificationSchema = z.object({
+  title: z.string(),
+  issuer: z.string(),
+  date: z.string().optional(),
+  category: certificationCategorySchema,
+  // App-relative path to the certificate file under /public/certifications.
+  file: z.string().optional(),
+  // External verification link (e.g. Coursera/Credly), preferred over `file` when present.
+  url: z.url().optional(),
+  // Featured in the homepage's curated selection.
+  curated: z.boolean().optional(),
+});
+
 const personSchema = z.object({
   name: z.string(),
   headline: z.string().optional(),
@@ -105,6 +137,7 @@ export const profileSchema = z.object({
   talks: z.array(talkSchema).optional(),
   work: z.array(workSchema).optional(),
   education: z.array(educationSchema).optional(),
+  certifications: z.array(certificationSchema).optional(),
   publications: z.array(publicationSchema).optional(),
   cta: z
     .array(
@@ -125,10 +158,14 @@ export type Person = z.infer<typeof profileSchema.shape.person>;
 export type Contact = z.infer<typeof profileSchema.shape.contact>;
 export type About = z.infer<typeof profileSchema.shape.about>;
 export type Skills = z.infer<typeof profileSchema.shape.skills>;
+export type SkillCategory = z.infer<typeof skillCategorySchema>;
 export type Services = z.infer<typeof profileSchema.shape.services>;
 export type Communities = z.infer<typeof profileSchema.shape.communities>;
 export type Talks = z.infer<typeof profileSchema.shape.talks>;
 export type Work = z.infer<typeof profileSchema.shape.work>;
 export type Education = z.infer<typeof profileSchema.shape.education>;
+export type Certifications = z.infer<typeof profileSchema.shape.certifications>;
+export type Certification = NonNullable<Certifications>[number];
+export type CertificationCategory = z.infer<typeof certificationCategorySchema>;
 export type Publications = z.infer<typeof profileSchema.shape.publications>;
 export type CTA = z.infer<typeof profileSchema.shape.cta>;

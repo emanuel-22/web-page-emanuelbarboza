@@ -8,6 +8,8 @@ import Link from "next/link";
 import { Copy } from "lucide-react";
 import { toast } from "sonner";
 import { captialize } from "@/lib/string";
+import { useLanguage } from "@/components/shared/language-provider";
+import { dictionary } from "@/lib/i18n";
 
 interface ContactSectionProps {
   contact?: Contact;
@@ -15,21 +17,24 @@ interface ContactSectionProps {
 }
 
 export function ContactSection({ contact, index }: ContactSectionProps) {
+  const { locale } = useLanguage();
+  const t = dictionary[locale].sections.contact;
+
   if (!contact || contact.length === 0) return null;
 
   const handleCopy = (network: string, text: string) => {
     navigator.clipboard.writeText(text);
-    toast.success(`${captialize(network)} copied to clipboard!`);
+    toast.success(t.copiedToClipboard(captialize(network)));
   };
 
   return (
     <Section
       id="contact"
       index={index}
-      title="Contacto"
-      description="Un espacio para conversar sobre proyectos, consultoría, capacitaciones, colaboraciones, eventos o nuevas oportunidades profesionales."
+      title={t.title}
+      description={t.description}
     >
-      <div className="grid gap-3 sm:grid-cols-2">
+      <div className="mx-auto grid max-w-md gap-3">
         {contact
           .filter((item) => item.type === "primary")
           .map((item, index) => {
@@ -42,7 +47,7 @@ export function ContactSection({ contact, index }: ContactSectionProps) {
                 {item.url ? (
                   <Button
                     variant="outline"
-                    className="h-auto flex-1 justify-start gap-3 border-0 p-4"
+                    className="group h-auto flex-1 justify-start gap-3 border-0 p-4"
                     asChild
                   >
                     <Link
@@ -50,7 +55,7 @@ export function ContactSection({ contact, index }: ContactSectionProps) {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Icon className="h-8! w-8! shrink-0 text-primary" />
+                      <Icon className="h-8! w-8! shrink-0 text-primary transition-transform duration-300 group-hover:scale-110" />
                       <div className="flex flex-col items-start gap-0.5 overflow-hidden">
                         <span className="text-xs font-medium text-muted-foreground">
                           {captialize(item.network)}
@@ -64,11 +69,11 @@ export function ContactSection({ contact, index }: ContactSectionProps) {
                 ) : (
                   <Button
                     variant="outline"
-                    className="h-auto flex-1 justify-between border-0 p-4 cursor-pointer"
+                    className="group h-auto flex-1 justify-between border-0 p-4 cursor-pointer"
                     onClick={() => handleCopy(item.network, item.username!)}
                   >
                     <div className="flex gap-3">
-                      <Icon className="h-8! w-8! shrink-0 text-primary" />
+                      <Icon className="h-8! w-8! shrink-0 text-primary transition-transform duration-300 group-hover:scale-110" />
                       <div className="flex flex-col items-start gap-0.5 overflow-hidden">
                         <span className="text-xs font-medium text-muted-foreground">
                           {item.network}

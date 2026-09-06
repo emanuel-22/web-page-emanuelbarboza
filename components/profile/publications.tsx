@@ -1,9 +1,13 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/shared/section";
 import { Publications } from "@/schemas/profile";
 import { FileText, Mic, BookOpen } from "lucide-react";
 import Link from "next/link";
 import { formatDate } from "@/lib/date";
+import { useLanguage } from "@/components/shared/language-provider";
+import { dictionary } from "@/lib/i18n";
 
 const typeIconMap = {
   blog: BookOpen,
@@ -20,10 +24,16 @@ export function PublicationsSection({
   publications,
   index,
 }: PublicationsSectionProps) {
+  const { locale } = useLanguage();
+
   if (!publications || publications.length === 0) return null;
 
   return (
-    <Section id="publications" index={index} title="Writing">
+    <Section
+      id="publications"
+      index={index}
+      title={dictionary[locale].sections.publications.title}
+    >
       <div className="space-y-4">
         {publications.map((pub, index) => {
           const Icon = pub.type ? typeIconMap[pub.type] : FileText;
@@ -35,7 +45,7 @@ export function PublicationsSection({
               <div className="flex-1 space-y-2">
                 <h3 className="font-semibold leading-tight">{pub.title}</h3>
                 <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-                  {pub.date && <span>{formatDate(pub.date)}</span>}
+                  {pub.date && <span>{formatDate(pub.date, locale)}</span>}
                   {pub.venue && (
                     <>
                       <span>•</span>
@@ -59,7 +69,7 @@ export function PublicationsSection({
                 href={pub.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex gap-4 rounded-lg border p-4 transition-colors hover:bg-accent"
+                className="flex gap-4 rounded-lg border p-4 transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:shadow-md"
               >
                 {content}
               </Link>

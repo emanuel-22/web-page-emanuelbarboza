@@ -3,25 +3,25 @@
 import { useEffect, useRef } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Section } from "@/components/shared/section";
 import { Communities } from "@/schemas/profile";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/components/shared/language-provider";
+import { dictionary } from "@/lib/i18n";
+import { useHorizontalLenis } from "@/lib/use-horizontal-lenis";
 import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
-interface CommunitiesSectionProps {
+interface CommunitiesBlockProps {
   communities?: Communities;
-  index?: number;
 }
 
 const DRAG_THRESHOLD = 6;
 const AUTO_SCROLL_SPEED = 0.35; // px per frame — muy lento
 
-export function CommunitiesSection({
-  communities,
-  index,
-}: CommunitiesSectionProps) {
+export function CommunitiesBlock({ communities }: CommunitiesBlockProps) {
+  const { locale } = useLanguage();
+  const t = dictionary[locale].sections.communities;
   const scrollerRef = useRef<HTMLDivElement>(null);
   const suppressClick = useRef(false);
   const paused = useRef(false);
@@ -32,6 +32,9 @@ export function CommunitiesSection({
     startX: 0,
     startScroll: 0,
   });
+
+  useHorizontalLenis(scrollerRef);
+
   useEffect(() => {
     const el = scrollerRef.current;
     if (!el || !communities || communities.length === 0) return;
@@ -114,12 +117,8 @@ export function CommunitiesSection({
   };
 
   return (
-    <Section
-      id="communities"
-      index={index}
-      title="Comunidades"
-      description="Espacios y comunidades en los que participo, colaboro y comparto experiencias alrededor de la tecnología, la agilidad y el aprendizaje colectivo."
-    >
+    <div>
+      <p className="mb-8 max-w-2xl text-muted-foreground">{t.description}</p>
       <div className="relative left-1/2 w-screen -translate-x-1/2 px-4 sm:px-6 lg:px-10">
         <div
           ref={scrollerRef}
@@ -142,13 +141,13 @@ export function CommunitiesSection({
             const content = (
               <Card
                 className={cn(
-                  "group flex h-full w-80 shrink-0 flex-col gap-4 p-5 transition-all sm:w-96",
-                  community.url && "hover:shadow-lg"
+                  "group flex h-full w-80 shrink-0 flex-col gap-4 p-5 transition-all duration-300 sm:w-96",
+                  community.url && "hover:-translate-y-1 hover:shadow-lg"
                 )}
               >
                 <CardHeader className="flex-row items-center gap-4 p-0">
                   {community.logo && (
-                    <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg border border-border bg-white">
+                    <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-lg bg-white transition-transform duration-300 group-hover:scale-105 sm:h-20 sm:w-20">
                       <Image
                         src={community.logo}
                         alt={community.name}
@@ -197,6 +196,6 @@ export function CommunitiesSection({
           })}
         </div>
       </div>
-    </Section>
+    </div>
   );
 }

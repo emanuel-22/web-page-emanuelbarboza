@@ -30,6 +30,7 @@ import {
   SiGraphql,
   SiNextdotjs,
   SiNodedotjs,
+  SiNestjs,
   SiPostgresql,
   SiReact,
   SiTailwindcss,
@@ -52,6 +53,9 @@ import {
   SiJira,
   SiApache,
   SiStimulus,
+  SiPlatzi,
+  SiGooglescholar,
+  SiResearchgate,
 } from "react-icons/si";
 import {
   LuAtSign,
@@ -101,6 +105,10 @@ const iconsBase: Record<string, IconType> = {
   // Social icons
   GitHub: SiGithub,
   LinkedIn: FaLinkedin,
+  LinkedInLearning: FaLinkedin,
+  Platzi: SiPlatzi,
+  GoogleScholar: SiGooglescholar,
+  ResearchGate: SiResearchgate,
   Twitter: SiX,
   X: SiX,
   Facebook: SiFacebook,
@@ -137,6 +145,7 @@ const iconsBase: Record<string, IconType> = {
   React: SiReact,
   Nextjs: SiNextdotjs,
   Nodejs: SiNodedotjs,
+  Nestjs: SiNestjs,
   Postgresql: SiPostgresql,
   Graphql: SiGraphql,
   Docker: SiDocker,

@@ -8,7 +8,7 @@ export const profile: Profile = {
   person: {
     name: "Emanuel Barboza",
     headline:
-      "Ingeniería de Software + Agilidad y Gestión de Proyectos + Investigación en Inteligencia Artificial",
+      "Ingeniería de Software + Agilidad y Gestión de Proyectos + Inteligencia Artificial",
     avatar: "/profile_photo.png",
     location: "Argentina",
   },
@@ -47,14 +47,27 @@ export const profile: Profile = {
       url: "https://www.instagram.com/argis_lab/",
       type: "social",
     },
+    {
+      icon: "GoogleScholar",
+      network: "GoogleScholar",
+      username: "Emanuel Barboza",
+      url: "https://scholar.google.com/citations?user=vTxKeVMAAAAJ&hl=es",
+      type: "social",
+    },
+    {
+      icon: "ResearchGate",
+      network: "ResearchGate",
+      username: "Emanuel Barboza",
+      url: "https://www.researchgate.net/profile/Emanuel-Barboza-2",
+      type: "social",
+    },
   ],
 
   about: {
     bio: [
-      "Mi nombre es **Emanuel Barboza**. Soy Licenciado en Análisis de Sistemas y trabajo en la intersección entre el desarrollo de software, la gestión de proyectos y la agilidad, con un interés creciente en la inteligencia artificial aplicada y en cómo la tecnología puede ayudar a resolver problemas reales de equipos y organizaciones.",
-      "Actualmente estoy finalizando una Maestría en Ingeniería de Software en la Universidad Nacional de La Plata (UNLP). Mi trabajo académico y de investigación se centra en la deuda técnica en entornos ágiles, especialmente en su identificación, comunicación, priorización y gestión, además de explorar el impacto de la inteligencia artificial generativa en la ingeniería de software.",
-      "A lo largo de mi trayectoria he participado en el desarrollo y evolución de sistemas de software, coordinando iniciativas y colaborando con equipos multidisciplinarios. Mi experiencia combina una mirada técnica con prácticas de gestión y mejora continua, trabajando con tecnologías como PHP, JavaScript, bases de datos relacionales, Docker y arquitecturas web.",
-      "También desarrollo actividades de docencia, investigación y divulgación, participando en charlas y comunidades vinculadas a la ingeniería de software, la agilidad y la tecnología.",
+      "Mi nombre es Emanuel Barboza, oriundo de Salta, Argentina. Soy graduado de la carrera Licenciatura en Análisis de Sistemas en la Universidad Nacional de Salta (UNSa). Mis comienzos en el mundo laboral fueron como auxiliar docente y becario de investigación EVC por la CIN (Consejo Interuniversitario Nacional). A lo largo de los años fui combinando distintas áreas que hoy forman parte de mi perfil: desarrollo de software, gestión de proyectos, agilidad e ingeniería de software. En este último tiempo, también empecé a profundizar en IA aplicada y en las posibilidades que abre para transformar la forma en que desarrollamos productos, tomamos decisiones y trabajamos en equipo. Es por ello que mi experiencia combina una mirada técnica con prácticas de gestión y mejora continua.",
+      "Actualmente estoy finalizando una Maestría en Ingeniería de Software en la Universidad Nacional de La Plata (UNLP). Mi trabajo de investigación se centra en la deuda técnica en entornos ágiles, especialmente en su identificación, comunicación, priorización y gestión, además de explorar el impacto de la IA generativa en la ingeniería de software.",
+      "En lo profesional, participé en el desarrollo y evolución de sistemas de software, trabajando con equipos multidisciplinarios y combinando la parte técnica con la coordinación, la mejora continua y la gestión. He trabajado principalmente con tecnologías como PHP, JavaScript, TypeScript, Python, Java, Ruby, bases de datos relacionales y no relacionales, Docker y arquitecturas web. Además, disfruto mucho compartir lo que voy aprendiendo y escuchar experiencia de otros profesionales. Por eso también participo en actividades de docencia, charlas y comunidades. Me interesa seguir construyendo proyectos en los que pueda conectar estas distintas miradas: tecnología, personas, gestión y aprendizaje continuo.",
     ].join("\n\n"),
   },
 
@@ -65,15 +78,15 @@ export const profile: Profile = {
       description:
         "Comunidad local de agilidad en Salta, Argentina: un espacio de encuentro para compartir prácticas ágiles, aprender entre pares y fortalecer el ecosistema tech de la provincia.",
       logo: "/communities/com_agilessalta.png",
-      url: "https://www.linkedin.com/in/emabarboza/",
+      url: "https://www.linkedin.com/company/agiles-salta/",
     },
     {
       name: "Argis Lab",
       role: "Fundador",
       description:
-        "Espacio propio para compartir artículos, proyectos e investigaciones sobre ingeniería de software, agilidad e inteligencia artificial.",
+        "Espacio propio para compartir artículos, proyectos e investigaciones sobre ingeniería de software, agilidad e inteligencia artificial. También en Instagram (@argis_lab).",
       logo: "/communities/com_argislab.png",
-      url: "https://medium.com/@emabarboza",
+      url: "https://chat.whatsapp.com/GrFpQi2xCam4EBBG7UzYdl",
     },
     {
       name: "Ágiles Argentina",
@@ -113,7 +126,7 @@ export const profile: Profile = {
       description:
         "Comunidad tecnológica de Salta que reúne a profesionales y entusiastas de la informática de la provincia para compartir conocimiento y experiencias.",
       logo: "/communities/com_informaticasalta.jpeg",
-      url: "https://www.linkedin.com/in/emabarboza/",
+      url: "https://chat.whatsapp.com/FBvjond1JgXKdESDv3faN7",
     },
     {
       name: "Scrum Latam Comunidad",
@@ -234,33 +247,66 @@ export const profile: Profile = {
       image: "/events/cha_fracasos.png",
       url: "http://sedici.unlp.edu.ar/handle/10915/176524",
     },
+    {
+      title: "Presentación de Content-Based Image Retrieval (CBIR)",
+      event: "SAIV — 48° JAIIO (Jornadas Argentinas de Informática)",
+      category: "congreso",
+      role: "Expositor",
+      date: "2019-09",
+      description:
+        "Presentación de un trabajo sobre Content-Based Image Retrieval (CBIR) en el Simposio Argentino de Imágenes y Visión (SAIV), en el marco de las 48° Jornadas Argentinas de Informática (JAIIO), Salta.",
+      image: "/events/cha_jaiio.png",
+      url: "https://www.researchgate.net/publication/343904548_Presentacion_de_Content_Based_Image_Retrieval_CBIR",
+    },
+    {
+      title: "¿Qué hace un informático? Charla para ingresantes",
+      event: "Universidad Nacional de Salta (UNSA) — Anfiteatro",
+      category: "charla",
+      role: "Expositor",
+      date: "2024",
+      description:
+        "Charla en el anfiteatro de la UNSA para estudiantes ingresantes, sobre qué hace un informático y los alcances de la carrera.",
+      image: "/events/cha_ingresantes2024.png",
+    },
+    {
+      title: "Colaborador en FLISoL 2025",
+      event: "Festival Latinoamericano de Instalación de Software Libre (FLISoL)",
+      category: "profesional",
+      role: "Colaborador",
+      date: "2025",
+      description:
+        "Colaboración en la organización del Festival Latinoamericano de Instalación de Software Libre (FLISoL) 2025, evento que promueve el uso de software libre y de código abierto.",
+      image: "/events/cha_flisol.png",
+    },
   ],
 
   skills: [
-    { text: "Java", icon: "Java" },
-    { text: "Python", icon: "Python" },
-    { text: "TypeScript", icon: "TypeScript" },
-    { text: "JavaScript", icon: "JavaScript" },
-    { text: "PHP", icon: "PHP" },
-    { text: "Laravel", icon: "Laravel" },
-    { text: "CakePHP", icon: "CakePHP" },
-    { text: "Ruby on Rails", icon: "RubyOnRails" },
-    { text: "Turbo Rails", icon: "TurboRails" },
-    { text: "Stimulus", icon: "Stimulus" },
-    { text: "Node.js", icon: "Nodejs" },
-    { text: "Bootstrap", icon: "Bootstrap" },
-    { text: "Tailwind", icon: "Tailwindcss" },
-    { text: "PostgreSQL", icon: "postgresql" },
-    { text: "MySQL", icon: "MySQL" },
-    { text: "MongoDB", icon: "MongoDB" },
-    { text: "Redis", icon: "Redis" },
-    { text: "Docker", icon: "docker" },
-    { text: "Spring", icon: "Spring" },
-    { text: "Next.js", icon: "nextjs" },
-    { text: "Azure", icon: "Azure" },
-    { text: "GitLab", icon: "GitLab" },
-    { text: "Jira", icon: "Jira" },
-    { text: "Apache", icon: "Apache" },
+    { text: "Java", icon: "Java", category: "language" },
+    { text: "Python", icon: "Python", category: "language" },
+    { text: "TypeScript", icon: "TypeScript", category: "language" },
+    { text: "JavaScript", icon: "JavaScript", category: "language" },
+    { text: "PHP", icon: "PHP", category: "language" },
+    { text: "Laravel", icon: "Laravel", category: "framework" },
+    { text: "CakePHP", icon: "CakePHP", category: "framework" },
+    { text: "Ruby on Rails", icon: "RubyOnRails", category: "framework" },
+    { text: "Turbo Rails", icon: "TurboRails", category: "framework" },
+    { text: "Stimulus", icon: "Stimulus", category: "framework" },
+    { text: "Node.js", icon: "Nodejs", category: "framework" },
+    { text: "Nest.js", icon: "Nestjs", category: "framework" },
+    { text: "React", icon: "React", category: "framework" },
+    { text: "Bootstrap", icon: "Bootstrap", category: "framework" },
+    { text: "Tailwind", icon: "Tailwindcss", category: "framework" },
+    { text: "Spring", icon: "Spring", category: "framework" },
+    { text: "Next.js", icon: "nextjs", category: "framework" },
+    { text: "PostgreSQL", icon: "postgresql", category: "database" },
+    { text: "MySQL", icon: "MySQL", category: "database" },
+    { text: "MongoDB", icon: "MongoDB", category: "database" },
+    { text: "Redis", icon: "Redis", category: "database" },
+    { text: "Docker", icon: "docker", category: "tool" },
+    { text: "Azure", icon: "Azure", category: "tool" },
+    { text: "GitLab", icon: "GitLab", category: "tool" },
+    { text: "Jira", icon: "Jira", category: "tool" },
+    { text: "Apache", icon: "Apache", category: "tool" },
   ],
 
   services: [
@@ -269,24 +315,52 @@ export const profile: Profile = {
       description:
         "Construcción de aplicaciones y sistemas web adaptados a las necesidades del negocio, con foco en calidad, mantenibilidad y buenas prácticas.",
       icon: "Code2",
+      image: "/services/desarrollo.png",
+      details: [
+        "Relevamiento de requerimientos y diseño de una arquitectura orientada a mantenibilidad y escalabilidad.",
+        "Desarrollo full-stack con PHP/Laravel, Ruby on Rails y Node.js, sobre bases de datos relacionales y no relacionales.",
+        "Integración continua, control de versiones y buenas prácticas de testing (QA) a lo largo de todo el proyecto.",
+        "Despliegue y mantenimiento con Docker y entornos cloud.",
+      ],
     },
     {
       title: "Consultoría y Coaching Ágil",
       description:
         "Acompañamiento a equipos en la adopción de Scrum y Kanban, facilitación de ceremonias y mejora continua de la forma de trabajo.",
       icon: "RefreshCw",
+      image: "/services/coaching-de-equipos.jpg",
+      details: [
+        "Diagnóstico del estado ágil del equipo y definición de un plan de mejora continua.",
+        "Facilitación de ceremonias Scrum y Kanban: planning, dailies, reviews y retrospectivas.",
+        "Coaching individual a Scrum Masters y Product Owners en formación.",
+        "Métricas ágiles (velocity, lead time, cycle time) para visibilizar el progreso del equipo.",
+      ],
     },
     {
       title: "Gestión de Proyectos",
       description:
         "Coordinación de proyectos de software de punta a punta, combinando una mirada técnica con prácticas ágiles de gestión.",
       icon: "ClipboardList",
+      image: "/services/gestion.jpg",
+      details: [
+        "Planificación, seguimiento y comunicación con stakeholders técnicos y de negocio.",
+        "Gestión de alcance, tiempos y riesgos combinando enfoques tradicionales y ágiles.",
+        "Coordinación de equipos multidisciplinarios: desarrollo, diseño UX/UI y QA.",
+        "Reportes de avance claros y accionables para la toma de decisiones.",
+      ],
     },
     {
       title: "Capacitaciones y Talleres",
       description:
         "Charlas y workshops in-company sobre agilidad, Scrum e inteligencia artificial aplicada al desarrollo de software.",
       icon: "GraduationCap",
+      image: "/services/talleres.jpg",
+      details: [
+        "Talleres in-company sobre Scrum, Kanban y fundamentos de agilidad.",
+        "Formación práctica en inteligencia artificial aplicada al desarrollo de software.",
+        "Contenido adaptado al nivel del equipo, desde introductorio hasta avanzado.",
+        "Dinámicas participativas y casos reales para afianzar el aprendizaje.",
+      ],
     },
   ],
 
@@ -470,7 +544,7 @@ export const profile: Profile = {
       degree: "Maestría y Especialización en Ingeniería de Software",
       start: "2024-04",
       end: null,
-      logo: "/uni_unlp.png",
+      logo: "/studies/uni_unlp.png",
       description: [
         "Trabajo Final Integrador de la Especialización en Ingeniería de Software: \"Revisión sistemática de la literatura sobre la deuda técnica en entornos ágiles de desarrollo de software\", bajo la dirección del Dr. Gustavo Rossi y codirección de la Dra. Alejandra Garrido.",
         "Tesis de la Maestría en Ingeniería de Software: \"Diseño y evaluación de un enfoque basado en Debt Stories para comunicar y priorizar deuda técnica entre perfiles técnicos y de negocio en equipos ágiles\", bajo la dirección de la Dra. Alejandra Garrido y codirección del Dr. Gustavo Rossi.",
@@ -481,7 +555,7 @@ export const profile: Profile = {
       degree: "Diplomatura en Testing de Software",
       start: "2026-03",
       end: "2026-07",
-      logo: "/uni_utnfrre.jpg",
+      logo: "/studies/uni_utnfrre.jpg",
       url: "https://drive.google.com/file/d/1Dl-leJDsf4kmbgU5WJCqqzJmEvil_mDX/view?usp=sharing",
     },
     {
@@ -489,7 +563,7 @@ export const profile: Profile = {
       degree: "Diplomatura en Metodologías y Marcos de Trabajo Ágiles",
       start: "2024-04",
       end: "2024-08",
-      logo: "/uni_utnba.png",
+      logo: "/studies/uni_utnba.png",
       description: "Certificado validado con blockchain.",
       url: "https://validator.centrodeelearning.com/validator/6daa6343-381f-42ab-8db6-9be96a28f491",
     },
@@ -498,7 +572,7 @@ export const profile: Profile = {
       degree: "Licenciatura en Análisis de Sistemas",
       start: "2015-01",
       end: "2022-12",
-      logo: "/uni_unsa.png",
+      logo: "/studies/uni_unsa.png",
       description: [
         "Tesis: \"Aplicación de Scrum para el desarrollo de un sistema software de gestión para instituciones con educación domiciliaria y hospitalaria en la provincia de Salta\", dirigida por la Lic. Adriana Binda y el Lic. Martín Díaz.",
         "Marco de trabajo: Scrum y prácticas ágiles. Tecnologías: Laravel, XAMPP, MySQL, JavaScript, Bootstrap, Visual Studio Code y Taiga.",

@@ -1,9 +1,14 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { About, Contact, Person, CTA } from "@/schemas/profile";
 import { Section } from "@/components/shared/section";
+import { Reveal } from "@/components/shared/reveal";
 import { Icons } from "@/components/shared/icons";
 import { renderRichText } from "@/lib/rich-text";
+import { useLanguage } from "@/components/shared/language-provider";
+import { dictionary } from "@/lib/i18n";
 import Link from "next/link";
 
 interface AboutSectionProps {
@@ -21,42 +26,36 @@ export function AboutSection({
   cta,
   index,
 }: AboutSectionProps) {
+  const { locale } = useLanguage();
+
   if (!about) return null;
 
   const paragraphs = (about.bio ?? "").split(/\n\s*\n/).filter(Boolean);
   const socials = contact?.filter((item) => item.type === "social" && item.url) ?? [];
 
   return (
-    <Section id="about" index={index} title="Sobre mí">
+    <Section id="about" index={index} title={dictionary[locale].sections.about.title}>
       <div className="grid gap-10 md:grid-cols-[1.3fr_1fr] md:items-center md:gap-16">
-        <div className="space-y-4">
+        <Reveal direction="left" className="space-y-4">
           {paragraphs.map((paragraph, i) => (
             <p key={i} className="leading-relaxed text-muted-foreground">
               {renderRichText(paragraph)}
             </p>
           ))}
-        </div>
+        </Reveal>
 
         {person.avatar && (
-          <div className="relative">
+          <Reveal
+            direction="right"
+            delay={120}
+            className="relative overflow-hidden rounded-2xl border border-border shadow-lg"
+          >
             <img
               src={person.avatar}
               alt={person.name}
-              className="aspect-3/4 w-full rounded-2xl border border-border object-cover shadow-lg"
+              className="aspect-3/4 w-full object-cover transition-transform duration-500 ease-out hover:scale-105"
             />
-            <div
-              className="pointer-events-none absolute -right-3 top-8 hidden flex-col gap-1.5 md:flex"
-              aria-hidden
-            >
-              {Array.from({ length: 12 }).map((_, i) => (
-                <span
-                  key={i}
-                  className="h-1 w-6 rounded-full bg-border"
-                  style={{ opacity: 1 - i * 0.07 }}
-                />
-              ))}
-            </div>
-          </div>
+          </Reveal>
         )}
       </div>
 
