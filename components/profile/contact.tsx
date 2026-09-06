@@ -11,9 +11,10 @@ import { captialize } from "@/lib/string";
 
 interface ContactSectionProps {
   contact?: Contact;
+  index?: number;
 }
 
-export function ContactSection({ contact }: ContactSectionProps) {
+export function ContactSection({ contact, index }: ContactSectionProps) {
   if (!contact || contact.length === 0) return null;
 
   const handleCopy = (network: string, text: string) => {
@@ -22,7 +23,12 @@ export function ContactSection({ contact }: ContactSectionProps) {
   };
 
   return (
-    <Section id="contact" title="Contact">
+    <Section
+      id="contact"
+      index={index}
+      title="Contacto"
+      description="Un espacio para conversar sobre proyectos, consultoría, capacitaciones, colaboraciones, eventos o nuevas oportunidades profesionales."
+    >
       <div className="grid gap-3 sm:grid-cols-2">
         {contact
           .filter((item) => item.type === "primary")

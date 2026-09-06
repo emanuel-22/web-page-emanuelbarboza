@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { ThemeProvider } from "@/components/shared/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { WhatsAppButton } from "@/components/shared/whatsapp-button";
 import { Metadata } from "next";
 import { BASE_URL } from "@/lib/env";
 import "./globals.css";
@@ -25,16 +25,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="en" className="dark scroll-smooth">
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background text-foreground antialiased`}
       >
-        <ThemeProvider>
-          <main className="flex min-h-screen flex-col max-w-6xl mx-auto">
-            {children}
-          </main>
-          <Toaster />
-        </ThemeProvider>
+        <main className="flex min-h-screen flex-col">{children}</main>
+        <WhatsAppButton />
+        <Toaster />
       </body>
     </html>
   );

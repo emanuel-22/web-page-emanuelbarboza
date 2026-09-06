@@ -9,18 +9,18 @@ export const formatDate = (date: string | undefined) => {
 
   const [year, month] = date.split("-");
   const monthNames = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+    "ene.",
+    "feb.",
+    "mar.",
+    "abr.",
+    "may.",
+    "jun.",
+    "jul.",
+    "ago.",
+    "sep.",
+    "oct.",
+    "nov.",
+    "dic.",
   ];
   if (month) {
     return `${monthNames[parseInt(month) - 1]} ${year}`;

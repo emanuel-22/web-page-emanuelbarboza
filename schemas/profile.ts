@@ -17,6 +17,9 @@ const workSchema = z.object({
   id: z.string().optional(),
   role: z.string(),
   org: z.string(),
+  // App-relative path (e.g. "/companies/comp_example.png") or absolute URL.
+  logo: z.string().optional(),
+  location: z.string().optional(),
   start: z.string(),
   end: z.string().nullable().optional(),
   summary: z.string().optional(),
@@ -25,23 +28,22 @@ const workSchema = z.object({
   url: z.url().optional(),
 });
 
-const projectSchema = z.object({
-  name: z.string(),
+const serviceSchema = z.object({
+  title: z.string(),
   description: z.string().optional(),
-  url: z.url().optional(),
-  role: z.string().optional(),
-  status: z.enum(["active", "archived"]).optional(),
-  start: z.string().optional(),
-  end: z.string().nullable().optional(),
-  tech: z.array(z.string()).optional(),
-  image: z.url().optional(),
+  // Lucide icon name, e.g. "Code2".
+  icon: z.string().optional(),
 });
 
 const educationSchema = z.object({
   school: z.string(),
   degree: z.string().optional(),
   start: z.string().optional(),
-  end: z.string().optional(),
+  end: z.string().nullable().optional(),
+  // App-relative path (e.g. "/uni_example.png") or absolute URL.
+  logo: z.string().optional(),
+  // Supports **bold** and *italic*; paragraphs separated by a blank line.
+  description: z.string().optional(),
   url: z.url().optional(),
 });
 
@@ -53,17 +55,33 @@ const publicationSchema = z.object({
   url: z.url().optional(),
 });
 
-const languageSchema = z.object({
-  code: z.string(),
-  label: z.string().optional(),
-  level: z.string().optional(),
+const talkSchema = z.object({
+  title: z.string(),
+  event: z.string(),
+  category: z.enum(["charla", "congreso", "profesional"]),
+  role: z.string().optional(),
+  date: z.string().optional(),
+  description: z.string().optional(),
+  // App-relative path (e.g. "/cha_example.png") or absolute URL.
+  image: z.string().optional(),
+  url: z.url().optional(),
+});
+
+const communitySchema = z.object({
+  name: z.string(),
+  role: z.string(),
+  description: z.string().optional(),
+  // App-relative path (e.g. "/com_example.png") or absolute URL.
+  logo: z.string().optional(),
+  url: z.url().optional(),
 });
 
 const personSchema = z.object({
   name: z.string(),
   headline: z.string().optional(),
   pronouns: z.string().optional(),
-  avatar: z.url().optional(),
+  // App-relative path (e.g. "/profile_photo.png") or absolute URL.
+  avatar: z.string().optional(),
   location: z.string().optional(),
   status: z.string().optional(),
 });
@@ -76,17 +94,18 @@ export const profileSchema = z.object({
   contact: z.array(socialSchema).optional(),
   about: z
     .object({
+      // Paragraphs separated by a blank line. Supports **bold** and *italic*.
       bio: z.string().optional(),
       keywords: z.array(z.string()).optional(),
     })
     .optional(),
   skills: z.array(textIconSchema).optional(),
-  projects: z.array(projectSchema).optional(),
+  services: z.array(serviceSchema).optional(),
+  communities: z.array(communitySchema).optional(),
+  talks: z.array(talkSchema).optional(),
   work: z.array(workSchema).optional(),
   education: z.array(educationSchema).optional(),
   publications: z.array(publicationSchema).optional(),
-  languages: z.array(languageSchema).optional(),
-  interests: z.array(textIconSchema).optional(),
   cta: z
     .array(
       z.object({
@@ -106,10 +125,10 @@ export type Person = z.infer<typeof profileSchema.shape.person>;
 export type Contact = z.infer<typeof profileSchema.shape.contact>;
 export type About = z.infer<typeof profileSchema.shape.about>;
 export type Skills = z.infer<typeof profileSchema.shape.skills>;
-export type Projects = z.infer<typeof profileSchema.shape.projects>;
+export type Services = z.infer<typeof profileSchema.shape.services>;
+export type Communities = z.infer<typeof profileSchema.shape.communities>;
+export type Talks = z.infer<typeof profileSchema.shape.talks>;
 export type Work = z.infer<typeof profileSchema.shape.work>;
 export type Education = z.infer<typeof profileSchema.shape.education>;
 export type Publications = z.infer<typeof profileSchema.shape.publications>;
-export type Languages = z.infer<typeof profileSchema.shape.languages>;
-export type Interests = z.infer<typeof profileSchema.shape.interests>;
 export type CTA = z.infer<typeof profileSchema.shape.cta>;

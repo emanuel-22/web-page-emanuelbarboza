@@ -13,15 +13,17 @@ const typeIconMap = {
 
 interface PublicationsSectionProps {
   publications?: Publications;
+  index?: number;
 }
 
 export function PublicationsSection({
   publications,
+  index,
 }: PublicationsSectionProps) {
   if (!publications || publications.length === 0) return null;
 
   return (
-    <Section id="publications" title="Publications">
+    <Section id="publications" index={index} title="Writing">
       <div className="space-y-4">
         {publications.map((pub, index) => {
           const Icon = pub.type ? typeIconMap[pub.type] : FileText;

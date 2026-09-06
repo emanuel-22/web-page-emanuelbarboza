@@ -1,4 +1,3 @@
-import { BASE_URL } from "@/lib/env";
 import type { Profile } from "@/schemas/profile";
 
 export const profile: Profile = {
@@ -7,223 +6,506 @@ export const profile: Profile = {
   lastUpdated: "2024-11-13",
 
   person: {
-    name: "Victory",
-    headline: "Full-Stack Developer & Product Maker",
-    avatar: `${BASE_URL}/avatar.png`,
-    location: "China, Shenzhen",
-    status: "🚀 Building launchsaas.org",
+    name: "Emanuel Barboza",
+    headline:
+      "Ingeniería de Software + Agilidad y Gestión de Proyectos + Investigación en Inteligencia Artificial",
+    avatar: "/profile_photo.png",
+    location: "Argentina",
   },
 
   contact: [
     {
       network: "Email",
-      username: "victorylaunches@gmail.com",
+      username: "emanuelbarboza5@gmail.com",
       type: "primary",
     },
     {
       icon: "GitHub",
       network: "GitHub",
-      username: "victorymakes",
-      url: "https://github.com/victorymakes",
+      username: "emanuel-22",
+      url: "https://github.com/emanuel-22/emanuel-22",
       type: "social",
     },
     {
-      icon: "twitter",
-      network: "Twitter",
-      username: "@victorymakes",
-      url: "https://x.com/victorymakes",
+      icon: "LinkedIn",
+      network: "LinkedIn",
+      username: "emabarboza",
+      url: "https://www.linkedin.com/in/emabarboza/",
       type: "social",
     },
     {
-      icon: "Rednote",
-      network: "Rednote",
-      username: "Victory Makes",
-      url: "https://www.xiaohongshu.com/user/profile/605834f00000000001002dfc",
+      icon: "X",
+      network: "X",
+      username: "@emabarboza5_ok",
+      url: "https://x.com/emabarboza5_ok",
+      type: "social",
+    },
+    {
+      icon: "Instagram",
+      network: "Instagram",
+      username: "argis_lab",
+      url: "https://www.instagram.com/argis_lab/",
       type: "social",
     },
   ],
 
   about: {
-    bio: "Full-stack engineer with 10+ years of experience across Java, Python, and TypeScript, focused on system architecture and data-intensive workloads. I turn ideas into working products—spanning apps, websites, and mini-programs—while caring deeply about code quality, performance, and user experience. Always building, shipping, and iterating.",
-    keywords: [
-      "Full-Stack",
-      "Architecture",
-      "Mentorship",
-      "Scrum",
-      "Product Maker",
-    ],
+    bio: [
+      "Mi nombre es **Emanuel Barboza**. Soy Licenciado en Análisis de Sistemas y trabajo en la intersección entre el desarrollo de software, la gestión de proyectos y la agilidad, con un interés creciente en la inteligencia artificial aplicada y en cómo la tecnología puede ayudar a resolver problemas reales de equipos y organizaciones.",
+      "Actualmente estoy finalizando una Maestría en Ingeniería de Software en la Universidad Nacional de La Plata (UNLP). Mi trabajo académico y de investigación se centra en la deuda técnica en entornos ágiles, especialmente en su identificación, comunicación, priorización y gestión, además de explorar el impacto de la inteligencia artificial generativa en la ingeniería de software.",
+      "A lo largo de mi trayectoria he participado en el desarrollo y evolución de sistemas de software, coordinando iniciativas y colaborando con equipos multidisciplinarios. Mi experiencia combina una mirada técnica con prácticas de gestión y mejora continua, trabajando con tecnologías como PHP, JavaScript, bases de datos relacionales, Docker y arquitecturas web.",
+      "También desarrollo actividades de docencia, investigación y divulgación, participando en charlas y comunidades vinculadas a la ingeniería de software, la agilidad y la tecnología.",
+    ].join("\n\n"),
   },
+
+  communities: [
+    {
+      name: "Ágiles Salta",
+      role: "Fundador",
+      description:
+        "Comunidad local de agilidad en Salta, Argentina: un espacio de encuentro para compartir prácticas ágiles, aprender entre pares y fortalecer el ecosistema tech de la provincia.",
+      logo: "/communities/com_agilessalta.png",
+      url: "https://www.linkedin.com/in/emabarboza/",
+    },
+    {
+      name: "Argis Lab",
+      role: "Fundador",
+      description:
+        "Espacio propio para compartir artículos, proyectos e investigaciones sobre ingeniería de software, agilidad e inteligencia artificial.",
+      logo: "/communities/com_argislab.png",
+      url: "https://medium.com/@emabarboza",
+    },
+    {
+      name: "Ágiles Argentina",
+      role: "Representante",
+      description:
+        "División de SADIO (Sociedad Argentina de Informática) dedicada a difundir la agilidad en el país, coordinando encuentros y jornadas en distintas ciudades.",
+      logo: "/communities/com_agilesargentina.jpeg",
+      url: "https://www.meetup.com/agiles-arg/",
+    },
+    {
+      name: "Agile-Lean Virtual Lab",
+      role: "Miembro",
+      description:
+        "Comunidad de práctica internacional sobre agilidad, lean thinking y liderazgo del cambio, con encuentros virtuales mensuales abiertos a toda la región.",
+      logo: "/communities/com_agilelean.png",
+      url: "https://leonelzapien.com/comunidades-de-practica/agile-lean-virtual-lab",
+    },
+    {
+      name: "Programadores Argentina",
+      role: "Miembro",
+      description:
+        "La comunidad de profesionales IT más grande de Argentina, con artículos técnicos, oportunidades laborales y networking entre developers.",
+      logo: "/communities/com_programadoresargentina.png",
+      url: "https://programadoresargentina.com/",
+    },
+    {
+      name: "Salta Dev",
+      role: "Miembro",
+      description:
+        "Comunidad de desarrolladores, diseñadores y emprendedores de Salta enfocada en eventos, aprendizaje y colaboración para impulsar el talento local.",
+      logo: "/communities/com_saltadev.png",
+      url: "https://salta.dev/",
+    },
+    {
+      name: "Informática Salta",
+      role: "Miembro",
+      description:
+        "Comunidad tecnológica de Salta que reúne a profesionales y entusiastas de la informática de la provincia para compartir conocimiento y experiencias.",
+      logo: "/communities/com_informaticasalta.jpeg",
+      url: "https://www.linkedin.com/in/emabarboza/",
+    },
+    {
+      name: "Scrum Latam Comunidad",
+      role: "Miembro",
+      description:
+        "Comunidad latinoamericana enfocada en Scrum y metodologías ágiles, donde se comparten experiencias y contenido para potenciar equipos y líderes ágiles.",
+      logo: "/communities/com_scrumlatam.png",
+      url: "https://www.linkedin.com/company/scrum-latam-comunidad",
+    },
+  ],
+
+  talks: [
+    {
+      title: "Prompt Engineering para Equipos Ágiles",
+      event: "Scrum LATAM Comunidad",
+      category: "charla",
+      role: "Speaker",
+      date: "2026-07",
+      description:
+        "Webinar sobre cómo aplicar prompt engineering en equipos ágiles para potenciar el trabajo diario con IA generativa.",
+      image: "/events/cha_prompt.jpeg",
+      url: "https://prezi.com/view/yFho4OfruCqhANz90pBG/?referral_token=yPOKgglnB3FN",
+    },
+    {
+      title: "Más rápidos, pero ¿más ágiles?",
+      event: "Agile Lean Virtual Lab",
+      category: "charla",
+      role: "Speaker",
+      date: "2026-08",
+      description:
+        "Charla sobre si seguimos siendo ágiles cuando dejamos de entender lo que hacemos con equipos que desarrollan con IA generativa: deuda técnica, transparencia y adaptabilidad.",
+      image: "/events/cha_masrapidos.jpeg",
+      url: "https://lnkd.in/p/dJmjCg-b",
+    },
+    {
+      title: "Aplicación de Patrones de Scrum en el Sector IT",
+      event: "Scrum LATAM Comunidad — 5.º aniversario",
+      category: "charla",
+      role: "Speaker",
+      date: "2025-02",
+      description:
+        "Charla presentada en el evento por el 5.º aniversario de Scrum LATAM Comunidad.",
+      image: "/events/cha_aplicaciones.png",
+      url: "https://www.youtube.com/watch?v=hEWu7mHaJoU&t=282s",
+    },
+    {
+      title: "Súbete al Tren – Segunda Estación",
+      event: "Panel junto a Claudio Aranda, Adriana Carina E. y Carlos Felipe Manzur Vicencio",
+      category: "charla",
+      role: "Panelista",
+      date: "2026-07",
+      description:
+        "Conversatorio transmitido por YouTube sobre IA, educación/idoneidad, agilidad y gestión organizacional, en torno a cómo incorporar IA sin perder criterio propio.",
+      image: "/events/cha_subetetren2.png",
+      url: "https://www.youtube.com/live/s4ndLzI_NyA?si=fKcxeIunoXPy5X9D",
+    },
+    {
+      title: "Súbete al Tren – Cuarta Estación",
+      event: "Panel junto a Carlos Felipe Manzur Vicencio, Leonel Zapien, Iveth V. y José de Jesús Martínez Rojano",
+      category: "charla",
+      role: "Panelista",
+      date: "2026-08",
+      description:
+        "Conversatorio transmitido por YouTube sobre IA en desarrollo de software, equipos aumentados, agilidad, talento, agentes autónomos, productividad y deuda técnica.",
+      image: "/events/cha_subetetren4.png",
+      url: "https://www.youtube.com/live/Ly2iReQffcY?si=rCjDkVM1N2WcBE-M",
+    },
+    {
+      title: "Encuentro con Ingresantes — Licenciatura en Análisis de Sistemas y Tecnicatura en Programación",
+      event: "Universidad Nacional de Salta (UNSA)",
+      category: "charla",
+      role: "Expositor",
+      description:
+        "Encuentro con estudiantes ingresantes de la Licenciatura en Análisis de Sistemas y la Tecnicatura en Programación de la UNSA.",
+      image: "/events/cha_ingresantes.png",
+      url: "https://www.youtube.com/live/Re_MMj9RLiI",
+    },
+    {
+      title: "Backlog en acción: De la teoría a la práctica con equipos ágiles",
+      event: "Charla en vivo",
+      category: "charla",
+      role: "Speaker",
+      description:
+        "Charla en vivo sobre cómo llevar el backlog de la teoría a la práctica en equipos ágiles.",
+      image: "/events/cha_red4patas.png",
+      url: "https://www.youtube.com/live/I_hcpoE4ObY?si=GMleVe8oioi1osC4",
+    },
+    {
+      title: "Deuda Cognitiva en Entornos Ágiles",
+      event: "Ágiles Argentina — Tucumán 2026",
+      category: "charla",
+      role: "Participante · Propuso el conversatorio",
+      date: "2026-08",
+      description:
+        "Como participante de Ágiles Argentina, propuse un conversatorio sobre deuda cognitiva en entornos ágiles.",
+      image: "/events/cha_agiles.png",
+      url: "https://lnkd.in/p/djSVwiWB",
+    },
+    {
+      title: "Préndete Salta",
+      event: "Concurso de emprendedores de Salta",
+      category: "profesional",
+      role: "Participante",
+      date: "2025-05",
+      description:
+        "Concurso que impulsa a emprendedores salteños a transformar sus ideas en negocios reales.",
+      image: "/events/cha_prendete.png",
+      url: "https://www.instagram.com/p/DKBJihzgX5u/",
+    },
+    {
+      title: "Razones de Fracaso de Proyectos de Software: un Mapeo Sistemático",
+      event: "CACIC 2024 — Workshop de Ingeniería de Software, UNLP",
+      category: "congreso",
+      role: "Autor · Mejor expositor del día",
+      date: "2024-10",
+      description:
+        "Presentado presencialmente en el Workshop de Ingeniería de Software del 30.º Congreso Argentino de Ciencias de la Computación. Distinguido como mejor expositor del primer día.",
+      image: "/events/cha_fracasos.png",
+      url: "http://sedici.unlp.edu.ar/handle/10915/176524",
+    },
+  ],
 
   skills: [
     { text: "Java", icon: "Java" },
     { text: "Python", icon: "Python" },
     { text: "TypeScript", icon: "TypeScript" },
-    { text: "Spark", icon: "Spark" },
+    { text: "JavaScript", icon: "JavaScript" },
+    { text: "PHP", icon: "PHP" },
+    { text: "Laravel", icon: "Laravel" },
+    { text: "CakePHP", icon: "CakePHP" },
+    { text: "Ruby on Rails", icon: "RubyOnRails" },
+    { text: "Turbo Rails", icon: "TurboRails" },
+    { text: "Stimulus", icon: "Stimulus" },
+    { text: "Node.js", icon: "Nodejs" },
+    { text: "Bootstrap", icon: "Bootstrap" },
+    { text: "Tailwind", icon: "Tailwindcss" },
     { text: "PostgreSQL", icon: "postgresql" },
     { text: "MySQL", icon: "MySQL" },
+    { text: "MongoDB", icon: "MongoDB" },
     { text: "Redis", icon: "Redis" },
     { text: "Docker", icon: "docker" },
     { text: "Spring", icon: "Spring" },
     { text: "Next.js", icon: "nextjs" },
+    { text: "Azure", icon: "Azure" },
+    { text: "GitLab", icon: "GitLab" },
+    { text: "Jira", icon: "Jira" },
+    { text: "Apache", icon: "Apache" },
   ],
 
-  projects: [
+  services: [
     {
-      name: "LaunchSaaS",
+      title: "Desarrollo de Software a Medida",
       description:
-        "Production-ready SaaS starter makes you ship fast. Features marketing pages, authentication, billing, blog, docs, user dashboard and admin dashboard.",
-      url: "https://launchsaas.org",
-      role: "Creator & Maintainer",
-      status: "active",
-      start: "2025-10",
-      end: null,
-      tech: ["NextJs", "Stripe", "Drizzle", "Fumadocs", "Better Auth"],
-      image: "https://i.postimg.cc/6qxDCp0M/launchsaas.png?w=800",
+        "Construcción de aplicaciones y sistemas web adaptados a las necesidades del negocio, con foco en calidad, mantenibilidad y buenas prácticas.",
+      icon: "Code2",
     },
     {
-      name: "VictoryHub",
+      title: "Consultoría y Coaching Ágil",
       description:
-        "All-in-one powerful utilities website for developers, designers, and professionals. Features blog, multi-language support, dark mode, SEO optimized.",
-      url: "https://victoryhub.cc",
-      role: "Creator & Maintainer",
-      status: "active",
-      start: "2025-08",
-      end: null,
-      tech: ["NextJs", "i18n", "MDX", "Vercel"],
-      image: "https://i.postimg.cc/6pcJXQR4/victoryhub.png?w=800",
+        "Acompañamiento a equipos en la adopción de Scrum y Kanban, facilitación de ceremonias y mejora continua de la forma de trabajo.",
+      icon: "RefreshCw",
     },
     {
-      name: "Victory's Blog",
+      title: "Gestión de Proyectos",
       description:
-        "Personal tech blog sharing insights on web development, programming languages, and software architecture. Built with Next.js and MDX for rich content.",
-      url: "https://blog.victoryhub.cc",
-      role: "Creator & Maintainer",
-      status: "active",
-      start: "2016-06",
-      end: null,
-      tech: ["NextJs", "MDX", "TailwindCSS", "GitHub Pages"],
-      image: "/blog.png",
+        "Coordinación de proyectos de software de punta a punta, combinando una mirada técnica con prácticas ágiles de gestión.",
+      icon: "ClipboardList",
     },
     {
-      name: "OpenSource Profile Template",
+      title: "Capacitaciones y Talleres",
       description:
-        "A modern, customizable developer profile template built with Next.js and Tailwind CSS. Showcases projects, skills, and experience in a clean layout.",
-      url: "https://github.com/victorymakes/profile",
-      role: "Creator & Maintainer",
-      status: "active",
-      start: "2025-11",
-      end: null,
-      tech: ["NextJs", "TypeScript", "TailwindCSS"],
-      image: "/profile.png",
+        "Charlas y workshops in-company sobre agilidad, Scrum e inteligencia artificial aplicada al desarrollo de software.",
+      icon: "GraduationCap",
     },
   ],
 
   // uncomment the following sections to show work experience, education, and publications
 
-  // work: [
-  //   {
-  //     id: "techcorp-senior",
-  //     role: "Senior Full-Stack Engineer",
-  //     org: "TechCorp Inc",
-  //     start: "2021-06",
-  //     end: null,
-  //     summary:
-  //       "Leading the development of a next-generation SaaS platform serving 100K+ users. Architected microservices infrastructure and mentored a team of 5 engineers.",
-  //     highlights: [
-  //       "Reduced page load time by 60% through performance optimization and code splitting",
-  //       "Implemented end-to-end CI/CD pipeline reducing deployment time from 2 hours to 15 minutes",
-  //       "Led migration from JavaScript to TypeScript across 50+ repositories",
-  //       "Established testing culture achieving 85% code coverage",
-  //       "Mentored 3 junior developers who were promoted to mid-level roles",
-  //     ],
-  //     tech: [
-  //       "TypeScript",
-  //       "React",
-  //       "Next.js",
-  //       "Node.js",
-  //       "PostgreSQL",
-  //       "Redis",
-  //       "Docker",
-  //       "Kubernetes",
-  //       "AWS",
-  //     ],
-  //     url: "https://techcorp.example.com",
-  //   },
-  //   {
-  //     id: "startup-lead",
-  //     role: "Lead Frontend Developer",
-  //     org: "StartupXYZ",
-  //     start: "2019-03",
-  //     end: "2021-05",
-  //     summary:
-  //       "Built the frontend architecture from scratch for a fintech startup. Grew team from 1 to 8 engineers while maintaining code quality and best practices.",
-  //     highlights: [
-  //       "Architected and built responsive web app used by 50K+ daily active users",
-  //       "Implemented design system adopted across 3 product teams",
-  //       "Reduced bundle size by 40% through tree-shaking and lazy loading",
-  //       "Established code review process and engineering standards",
-  //       "Led successful migration to React Hooks and Context API",
-  //     ],
-  //     tech: [
-  //       "React",
-  //       "Redux",
-  //       "TypeScript",
-  //       "Styled Components",
-  //       "Jest",
-  //       "Cypress",
-  //     ],
-  //     url: "https://startupxyz.example.com",
-  //   },
-  //   {
-  //     id: "agency-developer",
-  //     role: "Full-Stack Developer",
-  //     org: "Digital Agency Co",
-  //     start: "2017-01",
-  //     end: "2019-02",
-  //     summary:
-  //       "Developed custom web solutions for 20+ clients across various industries. Specialized in rapid prototyping and MVP development.",
-  //     highlights: [
-  //       "Delivered 15+ client projects on time and within budget",
-  //       "Built reusable component library reducing development time by 30%",
-  //       "Implemented headless CMS solutions for content-heavy websites",
-  //       "Collaborated directly with clients on requirements and technical specifications",
-  //     ],
-  //     tech: [
-  //       "JavaScript",
-  //       "React",
-  //       "Vue.js",
-  //       "Node.js",
-  //       "Express",
-  //       "MongoDB",
-  //       "WordPress",
-  //     ],
-  //     url: "https://digitalagency.example.com",
-  //   },
-  // ],
+  work: [
+    {
+      role: "Ssr Software Developer",
+      org: "Kozaca",
+      logo: "/companies/comp_kozaca.jpeg",
+      location: "Santa Fe, Argentina · En remoto",
+      start: "2025-10",
+      end: null,
+      summary:
+        "Desarrollo y mantenimiento de las plataformas web Red-i (gestión de clínicas) y Convenia Salud (financiadores de salud).",
+      highlights: [
+        "Implementación de nuevas funcionalidades y mejora continua de módulos críticos del sistema: historia clínica, turnos, portal del profesional y administrativo, facturación, lógica de precios, reglas de negocio para convenios, aranceles por prestador, liquidaciones, entre otras.",
+      ],
+      tech: [
+        "CakePHP",
+        "Python",
+        "JavaScript",
+        "Bootstrap",
+        "MySQL",
+        "MongoDB",
+        "Docker",
+        "GitLab",
+      ],
+    },
+    {
+      role: "Docente Universitario de Prácticas Profesionales III",
+      org: "UPATecO",
+      logo: "/companies/comp_upateco.jpeg",
+      start: "2026-03",
+      end: null,
+      summary:
+        "Práctica Profesional III de la Tecnicatura Universitaria en Programación, orientación en Desarrollo de Aplicaciones.",
+      highlights: [
+        "Responsable de guiar a los estudiantes en su transición al mundo laboral tecnológico, integrando conocimientos técnicos, habilidades profesionales y competencias comunicacionales.",
+        "Acompañamiento en el desarrollo de proyectos integrales aplicando buenas prácticas de arquitectura y desarrollo de software.",
+        "Simulación de entornos laborales reales y exposición a metodologías ágiles utilizadas en la industria (Scrum, Kanban, etc.).",
+        "Seguimiento de prácticas profesionales y proyectos aplicados, incluyendo simulación de entrevistas técnicas y comportamentales.",
+        "Desarrollo de habilidades de networking y planificación de carrera profesional.",
+      ],
+    },
+    {
+      role: "Docente Universitario de Metodologías Ágiles",
+      org: "UPATecO",
+      logo: "/companies/comp_upateco.jpeg",
+      start: "2025-07",
+      end: "2025-10",
+      summary:
+        "Curso universitario de Gestión de Proyectos Tecnológicos mediante Enfoque Ágil, aprobado por Resolución Rectoral N° 496/25 de UPATecO.",
+      highlights: [
+        "Formación integral en técnicas, herramientas y métodos ágiles como Scrum, Kanban y Lean Thinking para la gestión de proyectos.",
+        "Desarrollo de competencias en planificación colaborativa y aplicación de enfoques iterativos e innovadores.",
+        "Fomento del trabajo en equipo, la comunicación efectiva y la mejora continua en el desarrollo de iniciativas tecnológicas.",
+      ],
+    },
+    {
+      role: "Scrum Master",
+      org: "Proyecto DAR",
+      logo: "/companies/comp_dar.jpeg",
+      location: "Buenos Aires y alrededores · En remoto",
+      start: "2025-06",
+      end: "2025-10",
+      summary:
+        "Colaboración en el desarrollo de una página web para el refugio de animales callejeros Red4Patas, con el objetivo de impulsar las adopciones.",
+      highlights: [
+        "Acompañamiento a los equipos de desarrollo, diseño UX y QA en la aplicación de buenas prácticas ágiles, fomentando la autoorganización y la mejora continua.",
+        "Colaboración en la planificación y seguimiento de tareas, asegurando la integración de todas las áreas.",
+        "Participación activa en reuniones con Product Owner, Project Manager y cliente para alinear expectativas y objetivos.",
+        "Promoción de un entorno de trabajo colaborativo, orientado a la entrega de valor y a la misión social del proyecto.",
+      ],
+    },
+    {
+      role: "Full Stack Developer",
+      org: "nuntius IT",
+      logo: "/companies/comp_nuntius.jpeg",
+      location: "Argentina · Híbrido",
+      start: "2021-05",
+      end: "2025-05",
+      summary:
+        "Desarrollo y mantenimiento de un sistema integral de gestión para la importadora internacional Luxus, cubriendo operaciones, comercial, importación, administración, finanzas y facturación. También desarrollo y mantenimiento del sistema de gestión y la página de Bingos del Norte en Salta.",
+      highlights: [
+        "Backend: Ruby on Rails, Turbo Rails, Stimulus y Python.",
+        "Frontend: Node.js, HTML, Bootstrap, Tailwind, JavaScript, TypeScript y CSS.",
+        "Aplicación de Scrum, Docker, Azure, GitLab, Visual Studio Code, Miro y Jira.",
+      ],
+      tech: [
+        "Ruby on Rails",
+        "Turbo Rails",
+        "Stimulus",
+        "Python",
+        "Node.js",
+        "JavaScript",
+        "TypeScript",
+        "Tailwind",
+        "Docker",
+        "Azure",
+        "GitLab",
+        "Jira",
+      ],
+    },
+    {
+      role: "Analista Funcional | Business Analyst",
+      org: "nuntius IT",
+      logo: "/companies/comp_nuntius.jpeg",
+      start: "2022-05",
+      end: "2024-12",
+      summary:
+        "Relevamiento y análisis de requerimientos del cliente para el desarrollo de una aplicación de canjes de puntos multi-rubro.",
+      highlights: [
+        "Identificación de problemas, oportunidades y mejoras del proyecto.",
+        "Capacitación al cliente y a usuarios pilotos para el uso de la aplicación web de canjes de puntos.",
+      ],
+    },
+    {
+      role: "Scrum Master | Product Owner",
+      org: "MakiSan Tech",
+      logo: "/companies/comp_makizan.png",
+      location: "Argentina · En remoto",
+      start: "2024-10",
+      end: "2025-03",
+      summary:
+        "Facilitador, asegurando la comunicación en el equipo y el cumplimiento de objetivos.",
+      highlights: [
+        "Optimización del flujo de trabajo usando Scrum para el desarrollo de un MVP de un sitio web de eventos en la provincia de Salta.",
+        "Liderazgo de un equipo multidisciplinario conformado por diseñador UX/UI, desarrollador front-end y desarrollador back-end, adoptando buenas prácticas ágiles, reduciendo los bloqueos y mejorando su potencial.",
+      ],
+    },
+    {
+      role: "Asistente de Investigación | Research Assistant",
+      org: "Universidad Nacional de Salta",
+      logo: "/companies/comp_unsa.png",
+      location: "Salta, Salta, Argentina",
+      start: "2020-08",
+      end: "2021-08",
+      summary:
+        "Miembro de un proyecto sobre avances en el reconocimiento e interpretación de textos manuscritos históricos argentinos, becado con la Beca de Estímulo a las Vocaciones Científicas (EVC) del Consejo Interuniversitario Nacional (CIN).",
+      highlights: [
+        "Desarrollo y configuración de una plataforma para el análisis y procesamiento de imágenes de textos manuscritos históricos de la provincia de Salta.",
+        "Preparación y elaboración de artículos publicados en revistas nacionales.",
+      ],
+      tech: ["Python", "Inteligencia Artificial"],
+    },
+    {
+      role: "Software Developer",
+      org: "Universidad Nacional de Salta",
+      logo: "/companies/comp_unsa.png",
+      location: "En remoto",
+      start: "2020-06",
+      end: "2021-06",
+      summary:
+        "Desarrollo de un sistema web para la gestión de información barrial en la Ciudad de Salta, para que encuestadores y supervisores de la Dirección General de Estadísticas (DGE) dispongan de información actualizada para la toma de decisiones.",
+      highlights: [
+        "Tareas de relevamiento, análisis y diseño del sistema.",
+      ],
+      tech: ["PHP", "Laravel", "PostgreSQL", "Bootstrap", "Apache"],
+    },
+    {
+      role: "Auxiliar Docente | Teaching Assistant",
+      org: "Universidad Nacional de Salta",
+      logo: "/companies/comp_unsa.png",
+      location: "Salta, Salta, Argentina",
+      start: "2018-08",
+      end: "2021-05",
+      summary:
+        "Auxiliar de las materias Elementos de Programación, Programación, Algoritmos y Estructuras de Datos, y Programación Numérica de la Licenciatura en Análisis de Sistemas y la Tecnicatura Universitaria en Programación.",
+      highlights: [
+        "Preparación de clases de consulta y material de estudio para estudiantes, bajo supervisión de los profesores responsables.",
+        "Colaboración en la organización de proyectos grupales estudiantiles, guiando su desarrollo y exposición.",
+      ],
+      tech: ["Java"],
+    },
+  ],
 
-  // education: [
-  //   {
-  //     school: "University of California, Berkeley",
-  //     degree: "Master of Science in Computer Science",
-  //     start: "2015-09",
-  //     end: "2017-05",
-  //     url: "https://berkeley.edu",
-  //   },
-  //   {
-  //     school: "University of Washington",
-  //     degree: "Bachelor of Science in Computer Science",
-  //     start: "2011-09",
-  //     end: "2015-06",
-  //     url: "https://washington.edu",
-  //   },
-  //   {
-  //     school: "freeCodeCamp",
-  //     degree: "Full-Stack Web Development Certificate",
-  //     start: "2016-01",
-  //     end: "2016-06",
-  //     url: "https://freecodecamp.org",
-  //   },
-  // ],
+  education: [
+    {
+      school: "Universidad Nacional de La Plata (UNLP)",
+      degree: "Maestría y Especialización en Ingeniería de Software",
+      start: "2024-04",
+      end: null,
+      logo: "/uni_unlp.png",
+      description: [
+        "Trabajo Final Integrador de la Especialización en Ingeniería de Software: \"Revisión sistemática de la literatura sobre la deuda técnica en entornos ágiles de desarrollo de software\", bajo la dirección del Dr. Gustavo Rossi y codirección de la Dra. Alejandra Garrido.",
+        "Tesis de la Maestría en Ingeniería de Software: \"Diseño y evaluación de un enfoque basado en Debt Stories para comunicar y priorizar deuda técnica entre perfiles técnicos y de negocio en equipos ágiles\", bajo la dirección de la Dra. Alejandra Garrido y codirección del Dr. Gustavo Rossi.",
+      ].join("\n\n"),
+    },
+    {
+      school: "Universidad Tecnológica Nacional - Facultad Regional Resistencia, Chaco (UTN FRRe)",
+      degree: "Diplomatura en Testing de Software",
+      start: "2026-03",
+      end: "2026-07",
+      logo: "/uni_utnfrre.jpg",
+      url: "https://drive.google.com/file/d/1Dl-leJDsf4kmbgU5WJCqqzJmEvil_mDX/view?usp=sharing",
+    },
+    {
+      school: "Universidad Tecnológica Nacional - Facultad de Buenos Aires (UTN BA)",
+      degree: "Diplomatura en Metodologías y Marcos de Trabajo Ágiles",
+      start: "2024-04",
+      end: "2024-08",
+      logo: "/uni_utnba.png",
+      description: "Certificado validado con blockchain.",
+      url: "https://validator.centrodeelearning.com/validator/6daa6343-381f-42ab-8db6-9be96a28f491",
+    },
+    {
+      school: "Universidad Nacional de Salta (UNSa)",
+      degree: "Licenciatura en Análisis de Sistemas",
+      start: "2015-01",
+      end: "2022-12",
+      logo: "/uni_unsa.png",
+      description: [
+        "Tesis: \"Aplicación de Scrum para el desarrollo de un sistema software de gestión para instituciones con educación domiciliaria y hospitalaria en la provincia de Salta\", dirigida por la Lic. Adriana Binda y el Lic. Martín Díaz.",
+        "Marco de trabajo: Scrum y prácticas ágiles. Tecnologías: Laravel, XAMPP, MySQL, JavaScript, Bootstrap, Visual Studio Code y Taiga.",
+      ].join("\n\n"),
+      url: "https://drive.google.com/file/d/1QZnG_AWNHT4rjs_4kgWeDdBAxcu9E6r5/view?usp=sharing",
+    },
+  ],
 
   // publications: [
   //   {
@@ -270,38 +552,4 @@ export const profile: Profile = {
   //   },
   // ],
 
-  languages: [
-    {
-      code: "zh",
-      label: "Mandarin Chinese",
-      level: "Native",
-    },
-    {
-      code: "en",
-      label: "English",
-      level: "Professional Working",
-    },
-  ],
-
-  interests: [
-    { text: "Open Source", icon: "Github" },
-    { text: "Coding", icon: "Code" },
-    { text: "Teaching & Mentorship", icon: "Teach" },
-    { text: "Technical Writing", icon: "Write" },
-    { text: "Hiking", icon: "Mountain" },
-    { text: "Movie", icon: "Movie" },
-  ],
-
-  cta: [
-    {
-      label: "View My Projects",
-      url: "#projects",
-      style: "primary",
-    },
-    {
-      label: "Get In Touch",
-      url: "#contact",
-      style: "secondary",
-    },
-  ],
 };
