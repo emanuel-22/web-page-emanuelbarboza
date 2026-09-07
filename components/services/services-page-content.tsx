@@ -19,6 +19,9 @@ export function ServicesPageContent() {
   const profile = profiles[locale];
   const t = dictionary[locale].servicesPage;
   const services = profile.services ?? [];
+  const email = profile.contact?.find(
+    (item) => item.network === "Email",
+  )?.username;
 
   return (
     <>
@@ -35,6 +38,17 @@ export function ServicesPageContent() {
             {t.title}
           </h1>
           <p className="max-w-2xl text-muted-foreground">{t.intro}</p>
+          {email && (
+            <p className="max-w-2xl text-sm text-muted-foreground">
+              {t.contactLead}{" "}
+              <a
+                href={`mailto:${email}`}
+                className="font-medium text-primary underline-offset-4 hover:underline"
+              >
+                {email}
+              </a>
+            </p>
+          )}
         </div>
 
         <div className="space-y-12">

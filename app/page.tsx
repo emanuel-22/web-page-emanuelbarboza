@@ -4,40 +4,46 @@ import type { Metadata } from "next";
 import { BASE_URL } from "@/lib/env";
 
 export const metadata: Metadata = {
-  icons: {
-    icon: `${profile.person.avatar}`,
-  },
-  title: `${profile.person.name} - ${profile.person.headline}`,
-  description: profile.about?.bio,
+  // Title, description, canonical, Open Graph and Twitter are inherited from
+  // the root layout (app/layout.tsx). Only page-specific extras go here.
   keywords: [
     profile.person.name,
     ...(profile.skills?.map((skill) => skill.text) || []),
   ],
-  authors: [{ name: profile.person.name }],
-  openGraph: {
-    title: `${profile.person.name} - ${profile.person.headline}`,
-    description: profile.about?.bio,
-    url: BASE_URL,
-    siteName: profile.person.name,
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: `${profile.person.name} - ${profile.person.headline}`,
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${profile.person.name} - ${profile.person.headline}`,
-    description: profile.about?.bio,
-    images: ["/opengraph-image.png"],
-  },
 };
 
+function PersonJsonLd() {
+  const sameAs = (profile.contact ?? [])
+    .filter((c) => c.type === "social" && c.url)
+    .map((c) => c.url as string);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: profile.person.name,
+    url: BASE_URL,
+    image: `${BASE_URL}${profile.person.avatar ?? ""}`,
+    jobTitle: profile.person.headline,
+    address: profile.person.location
+      ? { "@type": "PostalAddress", addressCountry: profile.person.location }
+      : undefined,
+    knowsAbout: profile.skills?.map((skill) => skill.text),
+    sameAs,
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
 export default function Page() {
-  return <ProfilePage />;
+  return (
+    <>
+      <PersonJsonLd />
+      <ProfilePage />
+    </>
+  );
 }

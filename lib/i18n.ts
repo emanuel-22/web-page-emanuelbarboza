@@ -112,6 +112,7 @@ export const dictionary = {
       title: "Servicios",
       backLink: "Volver al inicio",
       intro: "Detalle de cada servicio que ofrezco.",
+      contactLead: "¿Te interesa alguno de estos servicios? Escribime a",
     },
   },
   en: {
@@ -222,6 +223,7 @@ export const dictionary = {
       title: "Services",
       backLink: "Back to home",
       intro: "Detail of each service I offer.",
+      contactLead: "Interested in any of these services? Email me at",
     },
   },
 } as const;
