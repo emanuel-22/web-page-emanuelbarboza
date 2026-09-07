@@ -3,3 +3,11 @@ node_modules
 .git
 .env*
 npm-debug.log
+.open-next
+.wrangler
+.vscode
+.idea
+*.tsbuildinfo
+Dockerfile
+docker-compose*.yml
+README.md
