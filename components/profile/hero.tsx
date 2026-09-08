@@ -21,7 +21,7 @@ export function Hero({ name, headline }: HeroProps) {
       id="top"
       className="relative flex min-h-screen items-center overflow-hidden bg-background"
     >
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0">
         <ParticlesBackground />
       </div>
 

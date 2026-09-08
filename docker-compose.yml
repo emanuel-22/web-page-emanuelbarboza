@@ -5,6 +5,9 @@ services:
       dockerfile: Dockerfile
     container_name: emanuelbarboza-web
     restart: unless-stopped
+    # The Dockerfile CMD builds/serves the production bundle; for local dev we
+    # override it to run `next dev` against the bind-mounted source (hot reload).
+    command: npm run dev
     ports:
       - "3002:3002"
     volumes:

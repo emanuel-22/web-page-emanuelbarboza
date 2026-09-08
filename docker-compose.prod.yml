@@ -10,8 +10,8 @@ services:
     restart: unless-stopped
 
     environment:
-      NODE_ENV: development
-      PORT: "3002"
+      NODE_ENV: production
+      PORT: "3000"
 
     ports:
-      - "3002:3002"
+      - "3002:3000"
