@@ -5,6 +5,15 @@ import Particles, { ParticlesProvider } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import type { Engine, ISourceOptions } from "@tsparticles/engine";
 
+/**
+ * Stable engine initializer. ParticlesProvider throws
+ * "init callback must be stable across the app lifecycle" if this identity
+ * changes before the engine finishes loading, so it must live outside render.
+ */
+const initEngine = async (engine: Engine) => {
+  await loadSlim(engine);
+};
+
 /** Ambient network-of-nodes background, evoking a graph / neural net. */
 export function ParticlesBackground() {
   const options: ISourceOptions = useMemo(
@@ -49,7 +58,7 @@ export function ParticlesBackground() {
   );
 
   return (
-    <ParticlesProvider init={async (engine: Engine) => { await loadSlim(engine); }}>
+    <ParticlesProvider init={initEngine}>
       <Particles id="hero-particles" options={options} className="h-full w-full" />
     </ParticlesProvider>
   );
