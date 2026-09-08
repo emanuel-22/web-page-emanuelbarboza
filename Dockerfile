@@ -6,10 +6,8 @@ FROM node:22-alpine AS base
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# ---- Dependencies -------------------------------------------------------
-FROM node:22-alpine AS builder
-
-WORKDIR /app
+# ---- Builder ----------------------------------------------------------
+FROM base AS builder
 
 COPY package*.json ./
 RUN npm ci --ignore-scripts
@@ -23,9 +21,8 @@ ENV NEXT_TELEMETRY_DISABLED=1
 RUN npm run build
 
 
-FROM node:22-alpine AS runner
-
-WORKDIR /app
+# ---- Runner ----------------------------------------------------------
+FROM base AS runner
 
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
