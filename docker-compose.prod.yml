@@ -17,3 +17,14 @@ services:
     # proxy_pass a 127.0.0.1:3002 según el dominio. (Igual que argislab.)
     ports:
       - "127.0.0.1:3002:3000"
+
+    # Endurecimiento: sin capabilities, sin escalar privilegios, filesystem de
+    # solo lectura salvo lo que Next necesita escribir (tmpfs, se pierde al reiniciar).
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    tmpfs:
+      - /tmp
+      - /app/.next/cache
