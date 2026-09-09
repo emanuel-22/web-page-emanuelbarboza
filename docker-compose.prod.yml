@@ -13,5 +13,7 @@ services:
       NODE_ENV: production
       PORT: "3000"
 
+    # Solo loopback: la única puerta pública es el Nginx del host, que hace
+    # proxy_pass a 127.0.0.1:3002 según el dominio. (Igual que argislab.)
     ports:
-      - "3002:3000"
+      - "127.0.0.1:3002:3000"
