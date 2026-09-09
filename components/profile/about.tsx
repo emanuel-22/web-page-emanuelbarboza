@@ -48,7 +48,7 @@ export function AboutSection({
           <Reveal
             direction="right"
             delay={120}
-            className="relative overflow-hidden rounded-2xl border border-border shadow-lg"
+            className="relative mx-auto w-full max-w-55 overflow-hidden rounded-2xl border border-border shadow-lg sm:max-w-70 md:mx-0 md:max-w-none"
           >
             <img
               src={person.avatar}

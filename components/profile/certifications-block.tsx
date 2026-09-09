@@ -37,7 +37,7 @@ export function CertificationsBlock({
           const content = (
             <div className="group flex h-full flex-col gap-3 rounded-2xl border border-border/50 bg-card/80 p-5 shadow-xl shadow-black/5 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-border hover:shadow-2xl">
               <Badge variant="secondary" className="w-fit">
-                {categories[cert.category]}
+                {categories[cert.category].replace(/^\P{L}+/u, "")}
               </Badge>
               <h4 className="font-semibold leading-snug">{cert.title}</h4>
               <p className="text-sm text-muted-foreground">{cert.issuer}</p>

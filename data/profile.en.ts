@@ -86,7 +86,7 @@ export const profileEn: Profile = {
       description:
         "My own space for sharing articles, projects, and research on software engineering, agility, and artificial intelligence. Also on Instagram (@argis_lab).",
       logo: "/communities/com_argislab.png",
-      url: "https://chat.whatsapp.com/GrFpQi2xCam4EBBG7UzYdl",
+      url: "https://www.argislab.com",
     },
     {
       name: "Ágiles Argentina",
@@ -379,6 +379,7 @@ export const profileEn: Profile = {
         "Development and maintenance of the Red-i (clinic management) and Convenia Salud (health insurers) web platforms.",
       highlights: [
         "Implementation of new features and continuous improvement of critical system modules: medical records, appointments, professional and administrative portals, billing, pricing logic, business rules for insurance agreements, provider fees, settlements, among others.",
+        "Stack: CakePHP and Python (backend), JavaScript and Bootstrap (frontend), MySQL and MongoDB (databases); Docker, GitLab, Visual Studio Code, and Trello.",
       ],
       tech: [
         "CakePHP",
@@ -389,6 +390,8 @@ export const profileEn: Profile = {
         "MongoDB",
         "Docker",
         "GitLab",
+        "Visual Studio Code",
+        "Trello",
       ],
     },
     {

@@ -86,7 +86,7 @@ export const profile: Profile = {
       description:
         "Espacio propio para compartir artículos, proyectos e investigaciones sobre ingeniería de software, agilidad e inteligencia artificial. También en Instagram (@argis_lab).",
       logo: "/communities/com_argislab.png",
-      url: "https://chat.whatsapp.com/GrFpQi2xCam4EBBG7UzYdl",
+      url: "https://www.argislab.com",
     },
     {
       name: "Ágiles Argentina",
@@ -378,6 +378,7 @@ export const profile: Profile = {
         "Desarrollo y mantenimiento de las plataformas web Red-i (gestión de clínicas) y Convenia Salud (financiadores de salud).",
       highlights: [
         "Implementación de nuevas funcionalidades y mejora continua de módulos críticos del sistema: historia clínica, turnos, portal del profesional y administrativo, facturación, lógica de precios, reglas de negocio para convenios, aranceles por prestador, liquidaciones, entre otras.",
+        "Stack: CakePHP y Python (backend), JavaScript y Bootstrap (frontend), MySQL y MongoDB (bases de datos); Docker, GitLab, Visual Studio Code y Trello.",
       ],
       tech: [
         "CakePHP",
@@ -388,6 +389,8 @@ export const profile: Profile = {
         "MongoDB",
         "Docker",
         "GitLab",
+        "Visual Studio Code",
+        "Trello",
       ],
     },
     {

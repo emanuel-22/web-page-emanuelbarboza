@@ -44,8 +44,6 @@ export const dictionary = {
           profesional: "Presentación",
         },
         viewMore: "Ver más",
-        prevAria: "Anterior",
-        nextAria: "Siguiente",
       },
       education: {
         title: "Estudios",
@@ -155,8 +153,6 @@ export const dictionary = {
           profesional: "Presentation",
         },
         viewMore: "Learn more",
-        prevAria: "Previous",
-        nextAria: "Next",
       },
       education: {
         title: "Education",

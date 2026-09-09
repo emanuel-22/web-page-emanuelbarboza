@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Talks } from "@/schemas/profile";
 import { formatDate } from "@/lib/date";
@@ -11,8 +10,6 @@ import { useHorizontalLenis } from "@/lib/use-horizontal-lenis";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ChevronLeft,
-  ChevronRight,
   ExternalLink,
   Mic,
   GraduationCap,
@@ -88,13 +85,6 @@ export function TalksBlock({ talks }: TalksBlockProps) {
 
   // Duplicated once so the auto-scroll can loop seamlessly.
   const loop = [...sorted, ...sorted];
-
-  const scrollBy = (dir: 1 | -1) => {
-    scrollerRef.current?.scrollBy({
-      left: dir * (scrollerRef.current.clientWidth * 0.85),
-      behavior: "smooth",
-    });
-  };
 
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
     if (e.pointerType !== "mouse") return;
@@ -177,7 +167,7 @@ export function TalksBlock({ talks }: TalksBlockProps) {
               <div
                 key={i}
                 aria-hidden={isDuplicate || undefined}
-                className="group flex w-90 shrink-0 flex-col overflow-hidden rounded-2xl border border-border/50 bg-card/80 shadow-xl shadow-black/5 backdrop-blur transition-all duration-300 hover:border-border hover:shadow-2xl sm:w-130"
+                className="group flex w-64 shrink-0 flex-col overflow-hidden rounded-2xl border border-border/50 bg-card/80 shadow-xl shadow-black/5 backdrop-blur transition-all duration-300 hover:border-border hover:shadow-2xl sm:w-130"
               >
                 <div className="relative aspect-4/3 w-full shrink-0 overflow-hidden bg-muted">
                   {talk.image ? (
@@ -247,27 +237,6 @@ export function TalksBlock({ talks }: TalksBlockProps) {
               </div>
             );
           })}
-        </div>
-
-        <div className="mt-2 flex justify-end gap-2">
-          <Button
-            variant="outline"
-            size="icon"
-            className="h-8 w-8 rounded-full"
-            onClick={() => scrollBy(-1)}
-            aria-label={t.prevAria}
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </Button>
-          <Button
-            variant="outline"
-            size="icon"
-            className="h-8 w-8 rounded-full"
-            onClick={() => scrollBy(1)}
-            aria-label={t.nextAria}
-          >
-            <ChevronRight className="h-4 w-4" />
-          </Button>
         </div>
       </div>
     </div>
